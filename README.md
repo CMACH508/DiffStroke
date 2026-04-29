@@ -158,7 +158,7 @@ The sketch files are used to enumerate samples. Training pairs are constructed a
 For face editing, the paper uses CelebA-HQ with 28,000 training images and 2,000 testing images. The code expects:
 
 ```text
-data/CelebA-HQ/
+data_train/CelebA-HQ/
 |-- train_split.txt
 |-- test_split.txt
 |-- CelebA-HQ-img/
@@ -228,7 +228,7 @@ python train_partial_sketch.py --output_dir outputs --auto_resume
 
 ```bash
 python train_face.py \
-  --data_path data/CelebA-HQ \
+  --data_path data_train/CelebA-HQ \
   --ckpt checkpoints/stable-diffusion-v1-5/v1-5-pruned-emaonly.ckpt \
   --adapter_ckpt checkpoints/t2i-adapter/t2iadapter_sketch_sd15v2.pth \
   --pidinet_ckpt checkpoints/pidinet/table5_pidinet.pth \
@@ -335,12 +335,17 @@ The main scripts expose the following path arguments:
 If you find this project useful, please cite:
 
 ```bibtex
-@article{li2026diffstroke,
-  title   = {Harnessing Diffusion Models for Image Manipulation With Partial Sketches},
-  author  = {Li, Tengjie and Tu, Shikui and Xu, Lei},
-  journal = {IEEE Transactions on Image Processing},
-  year    = {2026}
-}
+@ARTICLE{11495049,
+  author={Li, Tengjie and Tu, Shikui and Xu, Lei},
+  journal={IEEE Transactions on Image Processing}, 
+  title={Harnessing Diffusion Models for Image Manipulation With Partial Sketches}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Feeds;Antennas;Feedback;Circuits;Pixel;Videos;Video equipment;Communication systems;Text to video;Computer networks;sketch-based image manipulation;conditional controllable image synthesis;mask-free;diffusion models},
+  doi={10.1109/TIP.2026.3685834}}
+
 ```
 
 ## Acknowledgements
